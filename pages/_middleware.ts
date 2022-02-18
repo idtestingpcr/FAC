@@ -5,7 +5,7 @@ export async function middleware(req, ev) {
     const n = pathname.includes("wp-content/uploads");
     console.log(pathname)
     if (n) {
-        const baseweburl = 'https://memed.co.uk'
+        const baseweburl = 'https://itslyrics.com'
         return NextResponse.redirect(baseweburl + pathname);
     }
 

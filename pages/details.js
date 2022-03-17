@@ -16,7 +16,7 @@ export default function Details({photo,context }) {
 
   useEffect(()=>{
 console.log(photo, '--------')
-  var baseweburl = 'https://itslyrics.com'
+  var baseweburl = 'https://facelive.win'
   var urlParams = new URLSearchParams(window.location.search);
   var slug = urlParams.get('slug')
   var postid = urlParams.get('postid')
@@ -34,7 +34,7 @@ console.log(photo, '--------')
     setMyRender(true)
      // alert('third')
 
-     axios.get(`https://itslyrics.com/wp-json/my_posts/v2/post/${postid}`)
+     axios.get(`https://https://facelive.win/wp-json/my_posts/v2/post/${postid}`)
      .then(res => {
        console.log(res.data[0])
       setPersons(res?.data?.post_content)
@@ -50,7 +50,7 @@ console.log(photo, '--------')
  },[])
 
  const handleOGImage = (ogimg) => {
-  let repogimg = ogimg.replace("https://itslyrics.com", "https://lilhead.netlify.app")
+  let repogimg = ogimg.replace("https://facelive.win", "https://nervous-mahavira-002510.netlify.app")
   return repogimg;
  }
 
@@ -117,7 +117,7 @@ console.log(photo, '--------')
 export const getServerSideProps = async (context) => {
   let photo = null;
   console.log('--------------------------')
-  await axios.get(`https://itslyrics.com/wp-json/my_posts/v2/post/${context.query.postid}`).then(res => 
+  await axios.get(`https://facelive.win/wp-json/my_posts/v2/post/${context.query.postid}`).then(res => 
   
   photo= res.data
   

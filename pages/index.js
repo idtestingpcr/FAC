@@ -17,7 +17,7 @@ export default function Home() {
   
   useEffect(() => {
   // console.log(window.location, '================')
-      axios.get('https://itslyrics.com/wp-json/wp/v2/posts/')
+      axios.get('https://facelive.win/wp-json/wp/v2/posts/')
       .then(res => {
         // console.log(res.data)
         // const personss = res.data;
